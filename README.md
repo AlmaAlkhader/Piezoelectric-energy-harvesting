@@ -192,8 +192,6 @@ The comparison between the two circuits highlights the necessity of **rectificat
 
 ## Circuit Operation Flow
 
-This section explains the **step-by-step electrical operation** of the system for **both prototype circuits**, highlighting how energy flows from pedestrian interaction to lighting activation.
-
 ---
 
 ### Circuit 1: Direct Piezoelectric Output (Without Rectification or Storage)
@@ -343,6 +341,6 @@ energy harvesting systems.
 - Project poster: `figures/IMG_9101.jpg`
 
 <p align="center">
-  <img src="figures/IMG_9101.jpg" width="450">
+  <img src="figures/IMG_9101.jpg" width="600">
 </p>
 ---
