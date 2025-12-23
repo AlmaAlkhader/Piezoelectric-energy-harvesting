@@ -29,6 +29,168 @@ used to support low-power lighting applications.
 ![Conceptual flow](figures/concept-flow.png)
 
 ---
+## Components Used and Their Roles
+
+This project was implemented using two hardware configurations:
+1. A **direct piezoelectric output circuit** (without rectification or storage)
+2. A **conditioned energy harvesting circuit** (with rectification and capacitive storage)
+
+The following components were used across the two configurations.
+
+---
+
+### 1. Piezoelectric Sensors (×4)
+
+**Purpose**
+- Convert mechanical stress from pedestrian footsteps into electrical energy.
+
+**Configuration**
+- Four piezoelectric discs were connected in a **series–parallel configuration**.
+
+**Reason for configuration**
+- Series connection increases output voltage.
+- Parallel connection increases current capability.
+- The combined configuration provides a better balance for energy harvesting than using a single element.
+
+**Usage**
+- Used in both prototype circuits (with and without rectification).
+
+---
+
+### 2. Resistors
+
+#### a) 100 kΩ Resistor
+
+**Purpose**
+- Voltage stabilization and protection.
+- Prevents excessive voltage from damaging Arduino input pins.
+
+**Usage**
+- Connected across the piezoelectric output when interfacing with the Arduino.
+- Used primarily in the **direct piezo output prototype** to limit current during voltage spikes.
+
+---
+
+#### b) 10 kΩ Resistor
+
+**Purpose**
+- Pull-down / voltage reference resistor.
+
+**Usage**
+- Used with the piezoelectric sensor input to stabilize analog readings.
+- Used with the LDR as part of a voltage divider for ambient light sensing.
+
+---
+
+### 3. Diodes (×4)
+
+**Purpose**
+- Construct a **full-wave bridge rectifier**.
+
+**Why needed**
+- Piezoelectric sensors generate an alternating (AC) voltage.
+- Lighting systems and energy storage require direct current (DC).
+
+**Usage**
+- Used only in the **second prototype circuit**.
+- Four diodes form a bridge rectifier that converts AC output from the piezo array into DC.
+
+---
+
+### 4. Capacitor
+
+**Purpose**
+- Energy storage and voltage smoothing.
+
+**Why needed**
+- Piezoelectric output consists of short voltage spikes.
+- A capacitor accumulates energy over multiple footsteps and smooths the output voltage.
+
+**Usage**
+- Used only in the **rectified circuit**.
+- Connected after the bridge rectifier to store harvested energy.
+- Enables gradual voltage buildup and more stable output.
+
+---
+
+### 5. Arduino Uno
+
+**Purpose**
+- Monitoring, control, and logic implementation.
+
+**Role**
+- Reads voltage levels from the piezoelectric system or storage capacitor.
+- Implements control logic for lighting activation.
+- Interfaces with sensors (LDR) and output devices (LED, LCD).
+
+**Important note**
+- The Arduino does **not** power the system.
+- It acts only as a control and measurement unit.
+
+---
+
+### 6. LED
+
+**Purpose**
+- Visual indication of harvested energy availability.
+- Demonstration of lighting activation.
+
+**Usage**
+- In the direct piezo prototype, the LED turns on briefly due to voltage spikes.
+- In the rectified and stored prototype, the LED operates more consistently.
+
+---
+
+### 7. Light Dependent Resistor (LDR)
+
+**Purpose**
+- Ambient light sensing for energy-saving control.
+
+**Why used**
+- To prevent unnecessary lighting during daylight conditions.
+- To demonstrate demand-side energy efficiency.
+
+**Usage**
+- Combined with a 10 kΩ resistor to form a voltage divider.
+- Arduino reads the LDR value and enables lighting only when ambient light is low.
+
+---
+
+### 8. LCD Screen
+
+**Purpose**
+- System feedback and visualization.
+
+**Usage**
+- Displays measured voltage levels or system status.
+- Helps verify energy accumulation and system behavior during testing.
+
+---
+
+### 9. Breadboard
+
+**Purpose**
+- Rapid prototyping and testing.
+
+**Usage**
+- Used to assemble and modify circuits without soldering.
+- Allowed comparison between the unconditioned and conditioned prototypes.
+
+---
+
+## Circuit Comparison Summary
+
+| Feature | Prototype 1 | Prototype 2 |
+|------|-----------|------------|
+| Rectifier | No | Yes |
+| Capacitor | No | Yes |
+| Output Stability | Very low | Significantly improved |
+| Energy Storage | None | Present |
+| LED Behavior | Short flashes | More sustained operation |
+
+---
+
+The comparison between the two circuits highlights the necessity of **rectification and energy storage** for practical piezoelectric energy harvesting applications.
 
 ## Prototype Implementations
 
