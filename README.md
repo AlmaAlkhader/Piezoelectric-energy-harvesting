@@ -87,6 +87,12 @@ The following components were used across the two configurations.
 
 ---
 
+#### c) 220 Ω Resistor
+- Current-limiting resistor for the LED.
+- Prevents excessive current from damaging the LED and Arduino output pins.
+- Ensures safe and consistent LED operation in both prototypes.
+---
+
 ### 3. Diodes (×4)
 
 **Purpose**
