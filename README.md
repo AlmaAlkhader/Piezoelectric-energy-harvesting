@@ -26,7 +26,12 @@ The system converts pedestrian-induced mechanical stress into electrical energy 
 piezoelectric elements. The generated energy is conditioned and stored before being
 used to support low-power lighting applications.
 
-![Conceptual flow](figures/concept-flow.png)
+
+
+<p align="center">
+  <img src="figures/concept-flow.png" width="350">
+</p>
+
 
 ---
 ## Components Used and Their Roles
