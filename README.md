@@ -51,7 +51,8 @@ Raw piezoelectric output is unstable and unsuitable for direct lighting applicat
 
 To stabilize the output, a full-wave bridge rectifier and a storage capacitor were added.
 
-![Rectifier and storage](figures/IMG_9136.PNG)
+<img src="figures/IMG_9136.PNG" width="350">
+
 
 **Observed behavior**
 - AC output converted to DC
