@@ -51,7 +51,12 @@ Raw piezoelectric output is unstable and unsuitable for direct lighting applicat
 
 To stabilize the output, a full-wave bridge rectifier and a storage capacitor were added.
 
-<img src="figures/IMG_9136.PNG" width="350">
+
+
+<p align="center">
+  <img src="figures/IMG_9136.PNG" width="350">
+</p>
+
 
 
 **Observed behavior**
