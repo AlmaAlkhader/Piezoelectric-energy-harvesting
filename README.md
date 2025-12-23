@@ -29,7 +29,7 @@ used to support low-power lighting applications.
 
 
 <p align="center">
-  <img src="figures/concept-flow.png" width="350">
+  <img src="figures/concept-flow.png" width="500">
 </p>
 
 
