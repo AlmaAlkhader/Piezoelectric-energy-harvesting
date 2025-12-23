@@ -293,8 +293,8 @@ Convert intermittent piezoelectric output into usable and stable electrical ener
    - Lighting is demand-driven rather than continuous.
    - Demonstrates demand-side energy reduction alongside energy harvesting.
   
-       <p align="center">
-  <img src="circuits/ldr-lighting-control.png" width="450">
+<p align="center">
+  <img src="circuits/ldr-lighting-circuit.png" width="450">
 </p>
 ---
 
