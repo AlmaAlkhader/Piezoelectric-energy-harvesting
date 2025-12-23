@@ -52,7 +52,6 @@ Raw piezoelectric output is unstable and unsuitable for direct lighting applicat
 To stabilize the output, a full-wave bridge rectifier and a storage capacitor were added.
 
 
-
 <p align="center">
   <img src="figures/IMG_9136.PNG" width="350">
 </p>
@@ -71,6 +70,8 @@ energy harvesting systems.
 ---
 
 ## Circuit Implementations
+
+
 
 ### Raw Piezoelectric Circuit
 <p align="center">
