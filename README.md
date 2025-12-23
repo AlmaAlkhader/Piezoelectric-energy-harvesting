@@ -19,6 +19,17 @@ and experimental behavior**.
 - Validate system behavior through laboratory-scale prototypes
 
 ---
+## Table of Contents
+
+- [System Overview](#system-overview)
+- [Components Used and Their Roles](#components-used-and-their-roles)
+- [Circuit Operation Flow](#circuit-operation-flow)
+  - [Circuit 1: Direct Piezoelectric Output](#circuit-1-direct-piezoelectric-output-without-rectification-or-storage)
+  - [Circuit 2: Rectified Output with Energy Storage](#circuit-2-rectified-output-with-energy-storage-conditioned-circuit)
+  - [Sensor-Based Lighting Control Flow](#sensor-based-lighting-control-flow-applied-to-circuit-2)
+- [Circuit Comparison Summary](#circuit-comparison-summary)
+- [Prototype Implementations](#prototype-implementations)
+- [Documentation](#documentation)
 
 ## System Overview
 
