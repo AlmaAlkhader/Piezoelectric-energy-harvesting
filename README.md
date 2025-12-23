@@ -321,6 +321,10 @@ Convert intermittent piezoelectric output into usable and stable electrical ener
    - Energy becomes cumulative rather than instantaneous.
    - This configuration demonstrates **practical piezoelectric energy harvesting behavior**.
 
+     <p align="center">
+  <img src="circuits/rectifier-storage-circuit.png" width="450">
+</p>
+
 ---
 
 ### Sensor-Based Lighting Control Flow (Applied to Circuit 2)
@@ -341,6 +345,21 @@ Convert intermittent piezoelectric output into usable and stable electrical ener
 4. **Energy Efficiency Outcome**
    - Lighting is demand-driven rather than continuous.
    - Demonstrates demand-side energy reduction alongside energy harvesting.
+  
+       <p align="center">
+  <img src="circuits/ldr-lighting-control.png" width="450">
+</p>
+---
+
+## Circuit Comparison Summary
+
+| Feature | Prototype 1 | Prototype 2 |
+|------|-----------|------------|
+| Rectifier | No | Yes |
+| Capacitor | No | Yes |
+| Output Stability | Very low | Significantly improved |
+| Energy Storage | None | Present |
+| LED Behavior | Short flashes | More sustained operation |
 
 ---
 
@@ -351,45 +370,6 @@ The comparison between the two circuits clearly shows that:
 - Intelligent control logic significantly enhances system efficiency.
 - The combined approach aligns with real-world smart lighting requirements.
 
-
-### Raw Piezoelectric Circuit
-<p align="center">
-  <img src="circuits/raw-piezo-circuit.png" width="450">
-</p>
-
-### Rectifier and Storage Circuit
-<p align="center">
-  <img src="circuits/rectifier-storage-circuit.png" width="450">
-</p>
----
-
-## Arduino Integration
-
-An Arduino microcontroller is used for:
-- Monitoring voltage across the storage capacitor
-- Implementing control logic
-- Interfacing with lighting components
-
-The Arduino does not supply energy to the system; it acts solely as a monitoring
-and control unit.
-
----
-
-## Sensor-Based Lighting Control (Energy Saving)
-
-To reduce unnecessary energy consumption, the system integrates an
-**LDR (Light Dependent Resistor)**.
-
-![LDR lighting control](figures/ldr-lighting-control.png)
-
-**Control logic**
-- Lighting activates only when ambient light is insufficient
-- Prevents energy usage during daylight conditions
-- Demonstrates demand-side energy efficiency
-
-This method complements energy harvesting by reducing overall energy demand.
-
----
 
 ## Documentation
 
