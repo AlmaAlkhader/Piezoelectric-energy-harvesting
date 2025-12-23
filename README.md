@@ -187,19 +187,6 @@ The following components were used across the two configurations.
 - Used to assemble and modify circuits without soldering.
 - Allowed comparison between the unconditioned and conditioned prototypes.
 
----
-
-## Circuit Comparison Summary
-
-| Feature | Prototype 1 | Prototype 2 |
-|------|-----------|------------|
-| Rectifier | No | Yes |
-| Capacitor | No | Yes |
-| Output Stability | Very low | Significantly improved |
-| Energy Storage | None | Present |
-| LED Behavior | Short flashes | More sustained operation |
-
----
 
 The comparison between the two circuits highlights the necessity of **rectification and energy storage** for practical piezoelectric energy harvesting applications.
 
