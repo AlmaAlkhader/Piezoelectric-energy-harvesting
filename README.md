@@ -294,7 +294,6 @@ Convert intermittent piezoelectric output into usable and stable electrical ener
 <p align="center">
   <img src="circuits/ldr-lighting-circuit.png" width="450">
 </p>
----
 
 ## Circuit Comparison Summary
 
