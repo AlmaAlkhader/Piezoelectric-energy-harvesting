@@ -243,7 +243,113 @@ energy harvesting systems.
 ---
 
 ## Circuit Implementations
+## Circuit Operation Flow
 
+This section explains the **step-by-step electrical operation** of the system for **both prototype circuits**, highlighting how energy flows from pedestrian interaction to lighting activation.
+
+---
+
+### Circuit 1: Direct Piezoelectric Output (Without Rectification or Storage)
+
+**Objective:**  
+Demonstrate the raw electrical behavior of piezoelectric elements under mechanical stress and identify practical limitations.
+
+**Operation Flow:**
+
+1. **Mechanical Excitation**
+   - Mechanical pressure is applied to the piezoelectric sensors (simulating footsteps).
+   - Each piezoelectric disc generates an electrical signal proportional to the applied stress.
+
+2. **Electrical Signal Generation**
+   - The generated signal is **alternating current (AC)** in nature.
+   - Voltage appears as short-duration spikes with rapidly changing polarity.
+
+3. **Direct Load Connection**
+   - The piezoelectric output is connected directly to:
+     - An LED (visual indicator)
+     - Arduino analog input (voltage observation)
+   - A high-value resistor (100 kΩ) limits current and protects the input.
+
+4. **Observed Output Behavior**
+   - The LED turns on briefly during voltage spikes only.
+   - Illumination is weak and inconsistent.
+   - No voltage accumulation occurs between successive presses.
+
+5. **Operational Limitation**
+   - Energy is not stored.
+   - Output collapses immediately after pressure is removed.
+   - This circuit confirms that **raw piezoelectric output is unsuitable for sustained operation**.
+
+   
+<p align="center">
+  <img src="circuits/raw-piezo-circuit.png" width="450">
+</p>
+
+
+---
+
+### Circuit 2: Rectified Output with Energy Storage (Conditioned Circuit)
+
+**Objective:**  
+Convert intermittent piezoelectric output into usable and stable electrical energy.
+
+**Operation Flow:**
+
+1. **Mechanical Excitation**
+   - Pedestrian pressure deforms the piezoelectric elements.
+   - Electrical energy is generated in the form of AC voltage spikes.
+
+2. **AC–DC Conversion**
+   - The AC output is fed into a **full-wave bridge rectifier** composed of four diodes.
+   - Both positive and negative voltage cycles are converted into a unidirectional DC signal.
+
+3. **Energy Storage**
+   - The rectified DC output charges a capacitor.
+   - Each footstep contributes a small amount of energy to the capacitor.
+   - Voltage increases progressively with repeated mechanical excitation.
+
+4. **Voltage Monitoring**
+   - The Arduino reads the capacitor voltage through an analog input.
+   - The LCD displays voltage values, allowing real-time observation of energy accumulation.
+
+5. **Energy Utilization**
+   - When sufficient voltage is available, the stored energy can power a low-power load (LED).
+   - Output remains available even after mechanical pressure stops, until the capacitor discharges.
+
+6. **Operational Improvement**
+   - Output voltage is smoother and more stable.
+   - Energy becomes cumulative rather than instantaneous.
+   - This configuration demonstrates **practical piezoelectric energy harvesting behavior**.
+
+---
+
+### Sensor-Based Lighting Control Flow (Applied to Circuit 2)
+
+1. **Ambient Light Sensing**
+   - An LDR measures surrounding light intensity.
+   - The LDR and a 10 kΩ resistor form a voltage divider.
+
+2. **Decision Logic**
+   - Arduino evaluates two conditions:
+     - Stored voltage is above a minimum threshold.
+     - Ambient light level is below a predefined limit.
+
+3. **Lighting Activation**
+   - The LED is activated only when both conditions are satisfied.
+   - Prevents energy usage during daylight or insufficient storage.
+
+4. **Energy Efficiency Outcome**
+   - Lighting is demand-driven rather than continuous.
+   - Demonstrates demand-side energy reduction alongside energy harvesting.
+
+---
+
+### Operational Insight
+
+The comparison between the two circuits clearly shows that:
+- Piezoelectric energy harvesting **requires rectification and storage** for usability.
+- Intelligent control logic significantly enhances system efficiency.
+- The combined approach aligns with real-world smart lighting requirements.
 
 
 ### Raw Piezoelectric Circuit
