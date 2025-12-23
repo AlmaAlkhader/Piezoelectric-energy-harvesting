@@ -30,25 +30,12 @@ used to support low-power lighting applications.
 
 ---
 
-## Piezoelectric Configuration
-
-The prototype uses **four piezoelectric discs connected in a series–parallel configuration**.
-
-This configuration was selected to:
-- Increase output voltage via series connection
-- Increase current capability via parallel branches
-- Improve overall energy extraction efficiency
-
----
-
 ## Prototype Implementations
 
 ### Prototype 1: Direct Piezoelectric Output (Unconditioned)
 
 This prototype connects the piezoelectric array directly to the load without any
 energy conditioning stage.
-
-![Raw piezo prototype](figures/prototype-raw-output.png)
 
 **Observed behavior**
 - Output consists of short, high-voltage spikes
