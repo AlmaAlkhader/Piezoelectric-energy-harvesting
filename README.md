@@ -268,7 +268,7 @@ Convert intermittent piezoelectric output into usable and stable electrical ener
    - Energy becomes cumulative rather than instantaneous.
    - This configuration demonstrates **practical piezoelectric energy harvesting behavior**.
 
-     <p align="center">
+<p align="center">
   <img src="circuits/rectifier-storage-circuit.png" width="450">
 </p>
 
