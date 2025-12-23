@@ -339,8 +339,8 @@ energy harvesting systems.
 
 ## Documentation
 
-- Full research paper: `paper/Piezoelectric Energy Harvesting.pdf`
-- Project poster: `figures/poster.png`
+- Full research paper: `paper/Piezoelectric Energy Harvesting .pdf`
+- Project poster: `figures/IMG_9101.jpg`
 
 <p align="center">
   <img src="figures/IMG_9101.jpg" width="450">
