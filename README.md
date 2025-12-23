@@ -73,11 +73,14 @@ energy harvesting systems.
 ## Circuit Implementations
 
 ### Raw Piezoelectric Circuit
-![Raw piezo circuit](circuits/raw-piezo-circuit.png)
+<p align="center">
+  <img src="(circuits/raw-piezo-circuit.png" width="350">
+</p>
 
 ### Rectifier and Storage Circuit
-![Rectifier circuit](circuits/rectifier-storage-circuit.png)
-
+<p align="center">
+  <img src="(circuits/rectifier-storage-circuit.png" width="350">
+</p>
 ---
 
 ## Arduino Integration
