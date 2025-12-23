@@ -321,30 +321,9 @@ The comparison between the two circuits clearly shows that:
 
 ## Prototype Implementations
 
-### Prototype 1: Direct Piezoelectric Output (Unconditioned)
-
-This prototype connects the piezoelectric array directly to the load without any
-energy conditioning stage.
-
-**Observed behavior**
-- Output consists of short, high-voltage spikes
-- LED turns on briefly and inconsistently
-- No sustained or usable energy output
-
-**Conclusion**
-Raw piezoelectric output is unstable and unsuitable for direct lighting applications.
-
----
-
-### Prototype 2: Rectifier and Energy Storage (Conditioned Output)
-
-To stabilize the output, a full-wave bridge rectifier and a storage capacitor were added.
-
-
 <p align="center">
   <img src="figures/IMG_9136.PNG" width="350">
 </p>
-
 
 
 **Observed behavior**
@@ -363,7 +342,7 @@ energy harvesting systems.
 - Full research paper: `paper/Piezoelectric_Energy_Harvesting_Birzeit.pdf`
 - Project poster: `figures/poster.png`
 
-![Poster](figures/poster.png)
-
+<p align="center">
+  <img src="figures/img.png" width="450">
+</p>
 ---
-
