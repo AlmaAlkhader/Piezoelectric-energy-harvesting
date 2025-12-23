@@ -75,12 +75,12 @@ energy harvesting systems.
 
 ### Raw Piezoelectric Circuit
 <p align="center">
-  <img src="circuits/raw-piezo-circuit.png" width="350">
+  <img src="circuits/raw-piezo-circuit.png" width="450">
 </p>
 
 ### Rectifier and Storage Circuit
 <p align="center">
-  <img src="(circuits/rectifier-storage-circuit.png" width="350">
+  <img src="circuits/rectifier-storage-circuit.png" width="450">
 </p>
 ---
 
